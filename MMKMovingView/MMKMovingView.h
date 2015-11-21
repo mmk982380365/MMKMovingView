@@ -8,9 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@protocol MovingViewDelegate;
+@protocol MMKMovingViewDelegate;
 
-@interface MovingView : UIView
+@interface MMKMovingView : UIView
 /**
  *  按钮
  */
@@ -22,7 +22,11 @@
 /**
  *  代理
  */
-@property (assign,nonatomic) id<MovingViewDelegate> delegate;
+@property (assign,nonatomic) id<MMKMovingViewDelegate> delegate;
+/**
+ *  是否允许贴边
+ */
+@property (assign,nonatomic) BOOL allowAdsorption;
 /**
  *  初始化视图
  *
@@ -46,17 +50,24 @@
  *  @param state 状态
  */
 -(void)setTitle:(NSString *)title forState:(UIControlState)state;
+/**
+ *  设置背景图片
+ *
+ *  @param image 图片
+ *  @param state 状态
+ */
+-(void)setBackgroundImage:(UIImage *)image forState:(UIControlState)state;
 
 @end
 /**
  *  协议
  */
-@protocol MovingViewDelegate <NSObject>
+@protocol MMKMovingViewDelegate <NSObject>
 /**
  *  点击按钮动作
  *
  *  @param moving 执行操作的该视图
  */
--(void)buttonAction:(MovingView *)moving;
+-(void)buttonAction:(MMKMovingView *)moving;
 
 @end

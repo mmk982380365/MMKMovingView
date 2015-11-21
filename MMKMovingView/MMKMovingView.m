@@ -6,13 +6,13 @@
 //  Copyright (c) 2015年 wkf. All rights reserved.
 //
 
-#import "MovingView.h"
+#import "MMKMovingView.h"
 
-@interface MovingView ()
+@interface MMKMovingView ()
 
 @end
 
-@implementation MovingView
+@implementation MMKMovingView
 
 - (instancetype)initWithFrame:(CGRect)frame buttonType:(UIButtonType)type
 {
@@ -43,31 +43,36 @@
     //若为拖动状态时 将自身移动到屏幕边缘
     if (self.isDrag) {
         _isDrag=NO;
-//        NSLog(@"end    %f %f",self.center.x,self.center.y);
-        //若按钮在右侧 则移动到右侧边缘
-        if (self.center.x>=self.superview.frame.size.width/2.0) {
-            //动画效果
-            [UIView animateWithDuration:0.3 animations:^{
-                self.center=CGPointMake(self.superview.frame.size.width-self.frame.size.width/2.0-10, self.center.y);
-            }];
-        }
-        //若按钮在左侧 则移动到左侧边缘
-        else{
-            //动画效果
-            [UIView animateWithDuration:0.3 animations:^{
-                self.center=CGPointMake(self.frame.size.width/2.0+10, self.center.y);
-            }];
+        if (self.allowAdsorption) {
+            //若按钮在右侧 则移动到右侧边缘
+            if (self.center.x>=self.superview.frame.size.width/2.0) {
+                //动画效果
+                [UIView animateWithDuration:0.3 animations:^{
+                    self.center=CGPointMake(self.superview.frame.size.width-self.frame.size.width/2.0-10, self.center.y);
+                }];
+            }
+            //若按钮在左侧 则移动到左侧边缘
+            else{
+                //动画效果
+                [UIView animateWithDuration:0.3 animations:^{
+                    self.center=CGPointMake(self.frame.size.width/2.0+10, self.center.y);
+                }];
+            }
         }
     }
     //若不是拖动状态 则执行代理
     else{
 //        NSLog(@"ok");
         //判断代理是否遵循协议
-        if ([self.delegate conformsToProtocol:@protocol(MovingViewDelegate)]) {
+        if ([self.delegate conformsToProtocol:@protocol(MMKMovingViewDelegate)]) {
             [self.delegate buttonAction:self];
         }
     }
     
+}
+//设置背景图片
+-(void)setBackgroundImage:(UIImage *)image forState:(UIControlState)state{
+    [self.btn setBackgroundImage:image forState:state];
 }
 //拖动事件
 - (void) dragMoving: (UIButton *)btn withEvent:(UIEvent *)event

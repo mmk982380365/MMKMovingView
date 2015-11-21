@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>7C152E35-E155-4D82-8DDF-453A0BB41B9E</string>
+	<key>IDESourceControlProjectName</key>
+	<string>project</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>0F64D6A0E238AA4722D8F46A0463775E3CA41F89</key>
+		<string>https://github.com/mmk982380365/MMKMovingView.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>MMKMovingViewDemo/MMKMovingViewDemo.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>0F64D6A0E238AA4722D8F46A0463775E3CA41F89</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/mmk982380365/MMKMovingView.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>0F64D6A0E238AA4722D8F46A0463775E3CA41F89</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>0F64D6A0E238AA4722D8F46A0463775E3CA41F89</string>
+			<key>IDESourceControlWCCName</key>
+			<string>MMKMovingView</string>
+		</dict>
+	</array>
+</dict>
+</plist>
